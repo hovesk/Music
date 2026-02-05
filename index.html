@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>我的专属音频</title>
+</head>
+<body>
+    <audio id="player" controls autoplay loop>
+        <source
+src="https://github.com/hovesk/Music/raw/refs/heads/main/SHAUN%20-%20%EC%97%AC%EB%A6%84%EC%97%90%20%EB%91%90%EC%97%88%EB%8B%A4%20(%E7%95%99%E5%9C%A8%E5%A4%8F%E5%A4%A9).mp3"type="audio/mpeg">
+    
+
+    <script>
+        // 解决部分浏览器不自动播放的问题
+        window.onload = function() {
+            var player = document.getElementById('player');
+            player.play().catch(function(err) {
+                console.log("自动播放失败，请手动点击播放:", err);
+                // 如果自动播放失败，显示一个提示
+                alert("请点击播放按钮开始播放");
+            });
+        };
+    </script>
+</body>
+</html>
